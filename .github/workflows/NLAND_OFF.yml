@@ -1,8 +1,6 @@
 name: NLAND_OFF_SCHEDULE
 
 on:
-  schedule:
-    - cron: '*/10 * * * *' 
   workflow_dispatch:
 
 jobs:
