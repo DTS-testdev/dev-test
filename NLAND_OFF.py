@@ -51,6 +51,7 @@ dURL = os.getenv("DURL")
 parameters = json.loads(os.getenv("PARAMETERS"))
 header = json.loads(os.getenv("HEADER"))
 search_comment = json.loads(os.getenv("SEARCH_COMMENT"))
+url_prefix = os.getenv("URL_PREFIX")
 
 lands = []
 
@@ -122,7 +123,7 @@ list_new = filtered_df['articleno'].to_list()
 if not filtered_df.empty:
     for idx, row in filtered_df.iterrows():
         enlist_ok = '🔥🔥🔥🔥🔥🔥🔥\n' if row['enlist'] else ''
-        message_short = f"{enlist_ok}[{row['deposit']}/{row['rate']}] {row['building']} {row['floor']}층\n계약면적 {row['area_trans']}평, 전용면적 {row['area_real']}평\n{row['comment']}\n{row['agent']} {row['updated']}\n{os.getenv("URL_PREFIX")}{row['articleno']}"
+        message_short = f"{enlist_ok}[{row['deposit']}/{row['rate']}] {row['building']} {row['floor']}층\n계약면적 {row['area_trans']}평, 전용면적 {row['area_real']}평\n{row['comment']}\n{row['agent']} {row['updated']}\n{url_prefix}{row['articleno']}"
         send_slack_message(message_short, webhook_url=webhook_url_new)
         with open (json_directory, 'w') as f:
             list_all = list_saved + list_new
