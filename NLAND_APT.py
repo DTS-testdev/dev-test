@@ -84,7 +84,7 @@ def recall_last_msg(
 dURL = os.getenv("DURL")
 parameters = json.loads(os.getenv("PARAMETERS_APT"))
 header = json.loads(os.getenv("HEADER"))
-search_comment = json.loads(os.getenv("SEARCH_COMMENT"))
+search_comment = json.loads(os.getenv("SEARCH_COMMENT_APT"))
 url_prefix = os.getenv("URL_PREFIX")
 
 lands = []
