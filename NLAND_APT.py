@@ -132,11 +132,11 @@ for parameter in parameters:
         if result['moreDataYn'] == 'N':
             break
 
-    time.sleep(random.uniform(20, 70))
+    time.sleep(random.uniform(20, 50))
 
 result_df = pd.DataFrame(lands, columns=['updated', 'building', 'floor', 'deposit', 'area_trans', 'area_real', 'enlist', 'agent', 'comment', 'articleno']).sort_values(by='updated', ascending=False)
 sorted_df = result_df[
-    (result_df['deposit'] <= 30000)
+    (result_df['deposit'] <= 32000)
     ].reset_index(drop=True)
 
 try:
