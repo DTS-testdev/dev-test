@@ -23,6 +23,8 @@ jobs:
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
           DURL: ${{ secrets.DURL }}
+          SURL: ${{ secrets.SURL }}
+          RCID: ${{ secrets.RCID }}
           HEADER: ${{ secrets.HEADER }}
           PARAMETERS: ${{ secrets.PARAMETERS }}
           SEARCH_COMMENT: ${{ secrets.SEARCH_COMMENT }}
