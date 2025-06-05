@@ -146,7 +146,7 @@ json_filename = 'NLAND_OFF.json'
 json_directory = os.path.join(os.getcwd(),'pyprojects', json_filename)
 
 try:
-    list_saved = ast.literal_eval(recall_last_message())
+    list_saved = ast.literal_eval(recall_last_msg())
 except:
     list_saved = []
 
