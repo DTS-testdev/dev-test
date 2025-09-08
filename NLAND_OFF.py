@@ -138,7 +138,7 @@ for parameter in parameters:
 result_df = pd.DataFrame(lands, columns=['updated', 'building', 'floor', 'deposit', 'rate', 'area_trans', 'area_real', 'enlist', 'agent', 'comment', 'articleno']).sort_values(by='updated', ascending=False)
 sorted_df = result_df[
     #result_df['enlist'] &
-    (result_df['rate']<=70) &
+    (result_df['rate'] <= 80) &
     (result_df['deposit'] <= 2000)
     ].reset_index(drop=True)
 
